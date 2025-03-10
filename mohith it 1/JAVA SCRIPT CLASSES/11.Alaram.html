@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var currentTime;
+        function set(){
+            var alarmTime=document.getElementById('alarmTime').value;
+            console.log(alarmTime);
+            setInterval(function(){
+                currentTime=new Date().toTimeString().slice(0,5);
+                //console.log(currentTime);
+                if(alarmTime===currentTime)
+                {
+                    console.log("Alarm");
+                    var sound = new Audio("a.mp3");
+                    sound.play();
+                }
+            },1000)
+            
+        }
+    </script>
+</head>
+<body>
+    <h1>Alarm</h1>
+    <h2 id="time">xxx</h2>
+    <label>Time:</label>
+    <input type="time" id="alarmTime">
+    <button onclick="set()">Set Alarm</button>
+    <script>
+        setInterval(function(){
+            document.getElementById('time').innerText= new Date().toTimeString().slice(0,9)
+        },1000)
+    </script>
+</body>
+</html>

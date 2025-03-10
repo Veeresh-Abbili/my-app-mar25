@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selectors</title>
+</head>
+<style>
+/* Pseudo class selectors(:)*/
+button:hover{
+    background-color: yellow;
+}
+a:active{
+    color: brown;
+}
+a:visited{
+    color:red;
+}
+input:focus{
+    background-color: blue;
+}
+a:hover{
+    color:black
+}
+/* Pseudo Element Selector(::)*/
+p::first-letter{
+    font-size: xx-large;
+}
+p::first-line{
+    background-color: aqua;
+}
+label::before{
+    content: "Enter Your";
+}
+label::after{
+    content: ":";
+}
+/* Attribute Selector
+element[attribute value]{}*/
+input[type="number"]{
+    background-color: blue;
+}
+input[type="text"]{
+    background-color: rgb(183, 183, 189);
+}
+input[type="email"]{
+    background-color: rgb(18, 18, 26);
+}
+/* combinator selectors*/
+h1,h2,h3{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: red;
+}
+/* Descendant Selector*/
+div p{
+    color: blue;
+}
+
+/* Child Selector*/
+div>p{
+    color: blueviolet;
+}
+/* Adjacent Sibling Selector*/   
+div+p{
+    color: blue;
+}
+ /* General Sibling Selector*/
+ div~p{
+    color: brown;
+ }
+ 
+
+</style>
+<body>
+    <h1>selectors</h1>
+    <h3 class="heading"></h3>
+    <h3 class="heading"></h3>
+    <h3>SELECTORS</h3>
+    <button>click me!</button>
+    <a href="https://wwww.google.com">Google</a>
+    <a href="https://wwww.facebook.com">facebook</a>
+    <a href="https://wwww.linkedin.com">linkedin</a>
+    <input type="text">
+    <P>This interactive tutorial will teach you the</P>
+    <label >Name</label>
+    <input type="text"><br>
+    <label >Age</label>
+    <input type="number"><br>
+    <label >Email</label>
+    <input type="email"><br>
+    <label >Mobile</label>
+    <input type="text">
+
+    <div>
+        <p>Hi This IS Selectors topic</p>
+        <p>here you can able to learn all the selectors</p>
+        <h1>
+            <p>there are many selectors to select elements</p>
+        </h1>
+    </div>
+    <h1>Hello</h1>
+    <p>This topic is finished</p>
+</body>
+</html>

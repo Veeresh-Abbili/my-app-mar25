@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>z-index</title>
+<style>
+    body{ margin: 0;
+        border: 0;
+    
+    }
+    
+    .page{
+        width: 100vw;
+        height: 100vh;
+        background-color: wheat;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+    .step1{
+        width: 70%;
+        height: 14%;
+        background-color: black;
+       background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfsBI7wmPiLZMdDVCCufKT2J0gBjr_M9zlnA&s);
+       background-size: cover;
+       display: flex;
+       flex-direction: row
+    }
+    .navibar{
+        width: 100%;
+        height: 30%;
+        color: red;
+    }
+    .content{
+        width: 100%;
+        height: 70%;
+        color:white;
+    }
+    .step2{
+        width: 60%;
+        height: 14%;
+        background-color: rgb(73, 64, 64);
+        position: absolute;
+        z-index: 2;
+        top: 100px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+        
+    }
+    .one{
+        width: 70px;
+        height: 70px;
+        background-color: yellow;
+        border-radius: 50%;
+        border: 2px solid red;
+        right: 100px;
+        background-image: url(https://media.istockphoto.com/id/521403691/photo/hot-homemade-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=PaISuuHcJWTEVoDKNnxaHy7L2BTUkyYZ06hYgzXmTbo=);
+       
+    }
+    .step3{
+        width: 70%;
+        height: 14%;
+        background-color: blue;
+        margin-top: 50px;
+        background-image: url(https://www.tasteofhome.com/wp-content/uploads/2018/01/Homemade-Pizza_EXPS_FT23_376_EC_120123_3.jpg);
+        background-size: cover;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .heading{
+        color: white;
+        width:60%;
+        height:100%;
+    }
+    .button{
+        width: 40%;
+        height: 50%;
+    }
+    .step4{
+        width: 60%;
+        height: 14%;
+        background-color: rgb(145, 139, 139);
+        position: absolute;
+        z-index: 2;
+        top: 220px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-evenly;
+
+    }
+    .circles{
+        width: 70%;
+        height: 80%;
+    
+    }
+    .title{
+        color: white;
+        width: 30%;
+        height: 80%;
+    }
+    .step5{
+        width: 70%;
+        height: 14%;
+        background-color: yellow;
+        margin-top: 50px;
+        display: flex;
+        flex-direction: row;
+    }
+    .task1{
+        width: 30%;
+        height: 100%;
+        background-color: aqua;
+    }
+     .image{
+        width: 100%;
+        height: 50%;
+        background-image: url(https://images.squarespace-cdn.com/content/v1/5c79855051f4d4e3eae64ae5/1685417091977-84EHUZG33T46S8X8UKTB/CarterHiyama_HapaPizza-47.jpg?format=1500w);
+    
+    }
+    .details{
+        width: 100%;
+        height: 50%;
+        background-color: white;
+        
+        
+    }
+    .task2{
+        width: 30%;
+        height: 100%;
+        background-color: rgb(49, 58, 58);
+    }
+    .task3{
+        width: 30%;
+        height: 100%;
+        background-color:yellow;
+    }
+    .step6{
+        width: 60%;
+        height: 14%;
+        background-color: brown;
+        position: absolute;
+        z-index: 2;
+        top: 460px;
+    }
+    
+    .step7{
+        width: 70%;
+        height: 14%;
+        background-color: aqua;
+        margin-top: 50px;
+    }
+</style>
+
+</head>
+<body>
+    <div class="page">
+        <div class="step1">
+            <div class="navibar"> <h3>COURTYARD<sub>pizza wraps</sub></h3><button>VIEW MENU</button></div>
+            <div class="content"><h2>PIZZA & WRAPS</h2><P>pizza hut near kukatpally colony metro station,pizza hut near kukatpally colony metro station</P>
+            </div>
+        </div>
+        <div class="step2">
+            <div class="one"></div>
+            <div class="two"><P>WELCOME TO COURTYARD</P>
+            <P> sed do eiusmod tempor incididunt ut labore <br>et dolorFar far away, behind the word mountains,</P></div>
+         <button>READ MORE</button></div>
+        <div class="step3">
+            <div class="heading">DAILY SPECIALS<p>Everyday Value Offers and get 2 Regular Pizzas <br>starting at Rs.99 each or get 2 Medium</p></div>
+            <div class="button"><button>CHECK OUT OUR SPECIALS</button></div>
+       </div>
+        <div class="step4">
+            <div class="title">
+                              <P>pizzaChicago Style,
+                                California Pizza
+                               </P>
+            </div>
+            <div class="circles"> 
+                <img src="https://t3.ftcdn.net/jpg/00/27/57/96/360_F_27579652_tM7V4fZBBw8RLmZo0Bi8WhtO2EosTRFD.jpg" width="50px" height="50px">
+                <img src="https://media.istockphoto.com/id/1442417585/photo/person-getting-a-piece-of-cheesy-pepperoni-pizza.jpg?s=612x612&w=0&k=20&c=k60TjxKIOIxJpd4F4yLMVjsniB4W1BpEV4Mi_nb4uJU=" width="50px" height="50px">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/8/86/Pizza_%281%29.jpg" width="50px" height="50px">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGl6emF8ZW58MHx8MHx8fDA%3D" width="50px" height="50px">
+                <img src="https://img.freepik.com/free-vector/blackboard-background-with-pizza_23-2148907816.jpg?t=st=1741022928~exp=1741026528~hmac=cf02b78aae47fefcba4a20615e28dcc0c12f7ba408e181038736d44c6e284488&w=1060" width="50px" height="50px">
+             OUR MENU
+            </div>
+            
+        </div>
+        <div class="step5">
+            <div class="task1">
+                <div class="image"></div>
+                <div class="details"><p> OUR GALLERY <BR> search for pizza box or credit card<br> to find more great stock photos</p></div>
+            </div>
+            <div class="task2"></div>
+            <div class="task3"></div>
+
+        </div>
+        <div class="step6"></div>
+        <div class="step7"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects</title>
+    <script>
+        // creat 
+        var user={
+            id:20,
+            name:'veeresh',
+            mobile:7702448258
+        }
+
+        //print/select
+        console.log(user);
+        console.log(user.mobile);
+
+        console.log(user);
+        console.log(user.name);
+
+        //insert
+        user.age=20;
+        console.log(user);
+
+        //update
+        user.age=28;
+        console.log(user);
+
+        //delete
+        delete user.age;
+        console.log(user);
+
+        //nested objects with all data types
+        var student={
+            name :'veersh',
+            age:28,
+            mobile:[9876567865,9867543465],
+            isIndian:     (Boolean),
+             address:{
+                city:'kurnool',
+                state: 'Andhra pradesh',
+                pin:518360
+             }
+            
+        }
+        console.log(student);
+        console.log(student.mobile);
+        console.log(student.sddress);
+        console.log(student.address.state);
+
+         //Array of objects
+         var mobiles=[
+            { company:'Samsung',price:100000,model:'s23 ultra'},
+            { company:'Apple',price:125000,model:'16 ultra pro max'}
+        ]
+         console.log(mobiles);
+         console.log(mobiles[1].company);
+
+         // higher order methods for Array of Objects
+
+         var products=[
+            {name:'pen',price:320,rating:3.5},
+            {name:'book',price:120,rating:3.0},
+            {name:'shirt',price:500,rating:4},
+            {name:'bike',price:50000,rating:2.5},
+            {name:'car',price:250000,rating:4.5}
+         ]
+
+         console.log(products);
+
+         //map
+         products= products.map(product=>{product.price= product.price+50;
+            return product
+
+         });
+         console.log(products);
+         
+         //filter
+        //  products=products.filter(product=>product.price<2000);
+        //  console.log(products);
+
+         //sort
+         products=products.sort((a,b)=>a.price-b.price);  /* ascending*/
+         console.log(products);
+
+         products=products.sort((a,b)=>b.price-a.price);    /* descending*/
+         console.log(products);
+
+         //reduce
+         var total=products.reduce((sum,product)=>
+        sum+product.price,0);
+        console.log(total);
+        alert("total cart value:"+total)
+        
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <h1>Objects</h1>
+</body>
+</html>

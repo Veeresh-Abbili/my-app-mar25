@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<tab>, initial-scale=1.0">
+    <title>Nth Child SELECTORS</title>
+    <style>
+        th:nth-child(odd){
+            background-color: green;
+        }
+        td:first-child{
+            background-color: rgb(84, 88, 84);
+        }
+        td:last-child{
+            background-color: rgb(10, 10, 10);
+        }
+        td:nth-child(3n){
+            background-color: rgb(190, 23, 59);
+        }
+        tr:nth-child(even){
+            background-color: rgb(40, 21, 211);
+        }
+    </style>
+</head>
+<body><H1>Nth Child SELECTORS</H1>
+    <table border="2" cellpadding="10">
+      <thead>
+            <tr>
+                <th>S No</th>
+                <th>Name</th>
+                <th>City</th>
+            </tr>
+      </thead>
+      <tbody>
+        <tr>
+            <td>1</td>
+            <td>Name</td>
+            <td>Nellore</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Dinesh</td>
+            <td>Hyderabad</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Vivek</td>
+            <td>Vizag</td>
+        </tr>
+      </tbody>
+    </table>
+</body>
+</html>

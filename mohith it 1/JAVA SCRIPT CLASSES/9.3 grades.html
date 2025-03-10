@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add(){
+            var telugu = parseInt(document.getElementById('telugu').value);
+            var english = parseInt(document.getElementById('english').value);
+            var hindhi = parseInt(document.getElementById('hindhi').value);
+            var maths = parseInt(document.getElementById('maths').value);
+            var science = parseInt(document.getElementById('science').value);
+            var social = parseInt(document.getElementById('social').value);
+            console.log(telugu,english,hindhi,maths,science,social);
+            var marks=(telugu+english+hindhi+maths+science+social);
+            console.log(marks);
+            document.getElementById('result').innerText=marks;
+
+            if(marks>550){
+                document.getElementById('result').innerText=marks+'A';
+            }
+                 else if ((marks<550)&&(marks>500)){
+                    document.getElementById('result').innerText=marks+'B';
+                }
+            }
+
+        
+    </script>
+</head>
+<body>
+        <h1>Grades</h1>
+        <label>telugu:</label>
+        <input type="number" id="telugu"><br>
+        <label>english:</label>
+        <input type="number" id="english"><br>
+        <label>hindhi:</label>
+        <input type="number" id="hindhi"><br>
+        <label>maths:</label>
+        <input type="number" id="maths"><br>
+        <label>science:</label>
+        <input type="number" id="science"><br>
+        <label>social:</label>
+        <input type="number" id="social"><br><br>
+        <button class="button" onclick="add()">RESULT</button>
+
+        <h2 id="result">result</h2>
+</body>
+</html>

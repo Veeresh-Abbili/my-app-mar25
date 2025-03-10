@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Positions</title>
+    <style>
+        body{
+            margin: 0;
+            border: 0;
+        }
+        .parent{
+            width: 100vw;
+            height: 100vh;
+            background-color: aqua;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            overflow: auto;
+        }
+        .help{
+            width: 100px;
+            height: 30px;
+            border-radius: 20px;
+            background-color: green;
+            bottom: 0px;
+            right: 0px;
+            margin: 100px;
+            position: fixed;
+        }
+        .card{
+            width: 200px;
+            height: 400px;
+            background-color: white;
+            border-radius: 10px;
+        }
+        .image{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            background-image: url(https://madhurasrecipe.com/wp-content/uploads/2023/03/Veg-Biryani-Featured.jpg);
+            background-size: cover;
+            position: relative;  /*(1 step)*/
+        }
+        .rating{                      /*(3 step)*/
+            position: absolute;
+            background-color: grey;
+            top: 170px;
+            left: 15px;
+            opacity: 0.6;
+         }
+        .details{
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            margin-top: -21px;
+        }
+        .banner{
+            width: 450px;
+            height: 50px;
+            background-color: orange;
+            color: white;
+            font-size: xx-large;
+            padding: 20px;
+            border-radius: 20px;
+            margin: 10px;
+            position: sticky;
+            top: 0px;
+            text-align: center;
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="cards">
+        <div class="image">
+            <div class="rating">☆☆☆☆☆</div>
+        </div>
+         <div class="details">
+            <h1>biryani</h1>
+            <p>Rs.150 hyderabad famous biryani</p>
+            <p><del>456</del>400/- only</p>
+         </div>
+        </div>
+        <div class="banner">
+        upto 80% off on all items
+        </div>
+        <div class="text">
+            <p></p>
+        </div>
+         <h1> Positions</h1>
+        <button class="help">Need Help?</button>
+    </div>
+</body>
+</html>

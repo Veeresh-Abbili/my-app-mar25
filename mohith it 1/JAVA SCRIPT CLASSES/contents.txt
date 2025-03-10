@@ -1,0 +1,61 @@
+javascript: useful to implement functionalities,
+programing language
+
+functionalities:
+
+fuctionality
+interaction
+animations
+validations
+api integrations
+routing
+async operations
+dom operations
+
+
+topics:
+
+
+
+
+
+1. names                      Array
+2.name                        variable
+3. Student Information        Object
+4.Facebook Post               Object
+5. Facebook feed              Array of Object
+6. Mail                       Object
+7. Inbox                      Array of Object
+8. Product                    Object
+9.Amazon Products             Array of Object
+10. Student Registration      Object
+11. Login                      Object
+12. Cart Items                 Array of Object
+13.Table                       Array of Object
+14. Payments/Transactions       Array of Object
+
+
+
+Loops: useful to iterate over Staements
+======
+
+syntax:
+
+for(codition/initialization;codition;integration count){
+    Staements
+}
+
+for(var a=10; a>=1;a--){
+    console.log(a);
+}
+
+
+how many times iterates
+========================
+for(var a=10; a>=1;a--){}    10 times
+for(var a=1; a>=0;a++){}      inifinite
+for(var a=1; a>=2;a++){}       0 times
+for(var a=1; a>=1;a++){}       inifinite
+for(var a=1; true;a++){}        inifinite
+for(var a=1; a=0;a++){}           0 times
+for(;;){}                     inifinite

@@ -1,0 +1,18 @@
+<dt> description term
+<dd> description data
+<tr> table row 
+<td> table data
+<table border="2" cellspacing="0" cellpadding="5">
+ cellspacing =space between row and coulum
+merging
+row span
+colum span
+merge the cells of table
+
+forms:
+(collecting the user data)
+<form>
+signup
+registration
+applications
+request forms like office admnistration form (sop)
