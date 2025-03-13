@@ -1,0 +1,11 @@
+.container {
+    width: 300px;
+    height: 400px;
+    background-color: wheat;
+    margin-left: 30%;
+    margin-top: 15%;
+    text-align: center;
+    box-shadow: 10px 10px 0px 0px grey;
+    border-radius: 10px;
+    border: 2px solid red;
+}

@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>EMI Formula</h1> <hr> <br>
+    <label>Loan Amount:</label><br>
+    <input type="number" [(ngModel)]="loanAmount"><br><br><br>
+    <label>Interest Rate:</label><br>
+    <input type="number" [(ngModel)]="interestRate"><br><br><br>
+    <label>Loan Tenure:</label><br>
+    <input type="number" [(ngModel)]="loanTenure "><br><br><br>
+    <button (click)="emi()">Calculate EMI</button><br>
+    <h3>{{EMI}}</h3>
+    </div>

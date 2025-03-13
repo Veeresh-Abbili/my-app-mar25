@@ -1,0 +1,11 @@
+<div class="container">
+<h1>Simple Interest</h1><br><hr><br>
+<label>Principal:</label><br>
+<input type="number" [(ngModel)]="principal"><br><br>
+<label>Rate:</label><br>
+<input type="number" [(ngModel)]="rate"><br><br>
+<label>Time:</label><br>
+<input type="number" [(ngModel)]="time"><br><br>
+<button (click)="calculate()">Calculate</button>
+<h3>{{result}}</h3>
+</div>

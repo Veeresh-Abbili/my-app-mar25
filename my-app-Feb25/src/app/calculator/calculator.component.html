@@ -1,0 +1,14 @@
+<div class="calculator">
+    <h1>Calculator</h1><hr><br><br>
+<input type="number"  placeholder="Enter first number"  [(ngModel)]="num1"><br><br><br>
+<input type="number"  placeholder="Enter second number"  [(ngModel)]="num2"><br><br><br><br>
+
+<button (click)="add()">Add</button>
+
+<button (click)="sub()">Sub</button>
+
+<button (click)="mul()">Mul</button>
+
+<button (click)="div()">Div</button>
+
+<h2>{{result}}</h2></div>

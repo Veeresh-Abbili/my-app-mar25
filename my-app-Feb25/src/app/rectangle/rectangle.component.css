@@ -1,0 +1,42 @@
+
+.rectangle {
+     width: 320px; 
+    height: 400px;
+    background-color: rgb(94, 83, 83);
+    border: 2px solid black;
+    left: 50%;
+    position: absolute;
+    top: 20%;
+   /* z-index: 1;*/
+    overflow: hidden;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #888888;
+    transition: all 0.5s;
+}
+input {
+    width: 90%;
+    height: 30px;
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    font-size: 20px;
+}
+.button {
+    width: 95%;
+    height: 40px;
+    background-color: #2b53aa; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px #534b4b;
+    transition: all 0.5s;
+}
