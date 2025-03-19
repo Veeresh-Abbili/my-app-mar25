@@ -1,0 +1,15 @@
+<h1>Flipkart</h1>
+<div class="container">
+    <div *ngFor="let product of flipkart;let i=index">
+        
+
+    <img [src]="product.image" alt="{{product.title}}'s image" >
+    <div class="rating">{{product.rating.rate}}</div>
+    <div class="category">{{product.category}}</div>
+    <div class="title">{{product.title}}</div>
+    <div class="price">{{product.price}}</div>
+    
+    
+
+    </div> 
+</div>

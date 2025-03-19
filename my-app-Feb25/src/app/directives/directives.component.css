@@ -1,0 +1,39 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: aqua;
+    display: flex;
+    overflow: auto;
+}
+.Left{ 
+    width: 25%;
+    height: 100%;
+    background-color:rgb(143, 78, 118);
+    padding: 0%;
+    border-radius: 0px;
+    border: 20px solid rgb(177, 84, 84);
+    text-align: center; 
+}
+.Right{
+    width: 75%;
+    height: 100%;
+    background-color:rgb(76, 91, 97);
+    padding: 0%;
+    border-radius: 0px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    align-items: center;
+    border: 20px solid rgb(209, 176, 176);
+    overflow: auto;
+}
+.table{
+    background-color: white;
+}
+.green{
+    color: green;
+}
+.red{
+    color: red;
+}
+.yellow{
+    color: yellow;
+}

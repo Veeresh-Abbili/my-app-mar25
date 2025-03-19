@@ -1,8 +1,8 @@
-body{
+/*body{
     margin:0%;
     border: 0%;
     padding: auto;
-}
+}*/
 .parent{
     display: flex;
     height: 100vh;
@@ -16,7 +16,8 @@ body{
     padding: 0%;
     border-radius: 0px;
     border: 20px solid rgb(177, 84, 84);
-    text-align: center;    
+    text-align: center; 
+      
 }
 header{
     width: 100%;

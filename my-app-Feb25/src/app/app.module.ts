@@ -18,6 +18,12 @@ import { FormsModule } from '@angular/forms';
 import { EMIComponent } from './emi/emi.component';
 import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { HttpClientModule } from '@angular/common/http';
+import { AccountsComponent } from './accounts/accounts.component';
+import { FlipkartComponent } from './flipkart/flipkart.component';
 
 @NgModule({
   declarations: [
@@ -35,12 +41,19 @@ import { SimpleInterestComponent } from './simple-interest/simple-interest.compo
     BMIComponent,
     EMIComponent,
     FahrenheitComponent,
-    SimpleInterestComponent
+    SimpleInterestComponent,
+    DirectivesComponent,
+    EmployeeComponent,
+    VehicleComponent,
+    AccountsComponent,
+    FlipkartComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    
     
   ],
   providers: [],

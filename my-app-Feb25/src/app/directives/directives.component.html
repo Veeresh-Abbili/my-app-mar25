@@ -1,0 +1,42 @@
+<div class="container">
+<div class="Left"></div>
+<div class="Right">
+    <h1>Products</h1>
+
+<table class="table"   border="2px">
+    <thead>
+        <tr>
+            <th>name</th>
+            <th>Price</th>
+            <th>rating</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let product of products">
+            <td>{{product.name | uppercase}}</td>
+            <td [ngStyle]="{'color':product.price<2000 ? 'green':'red' }">{{product.price}}</td>
+            <td [ngClass]="{'green':product.rating>4,'red':product.rating<2,'yellow':product.rating>2&&product.rating<4}">{{product.rating}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<ol>
+    <li *ngFor="let state of states">{{state}}</li>
+</ol>
+
+<ul>
+    <li *ngFor="let state of states">{{state}}</li>
+</ul>
+
+<select>
+    <option *ngFor="let state of states">{{state}}</option>
+</select>
+
+<p *ngIf="!isVisible">Welcome to Mohith IT</p>
+<P *ngIf="isVisible">Thank you for joining</P>
+
+
+<h1>{{newDate | date:'yyyy-MM-dd'}}</h1>
+
+</div>
+</div>
