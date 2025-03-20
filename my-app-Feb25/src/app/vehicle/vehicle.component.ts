@@ -24,14 +24,13 @@ export class VehicleComponent {
   }
   filter(){
     this._vehicleService.getFilteredVehicles(this.term).subscribe((data:any)=>{
-
     console.log(data);
     this.vehicles=data;
+    console.log(this.vehicles);
    },(err:any)=>{
     alert("Internal Server Error!");
    }
   )
-    
   }
   column:string='';
   order:string='';
@@ -39,6 +38,7 @@ export class VehicleComponent {
   sort(){
    this._vehicleService.getSortedVehicles(this.column, this.order).subscribe(
     (data:any)=>{
+      console.log(data);
       this.vehicles=data;
    },(err:any)=>{
     alert('invalid data')

@@ -6,13 +6,13 @@
     overflow: auto;
 }
 .left{
-  width: 25%;
+  width: 20%;
   height: 100%;
-  background-color: blueviolet;  
+  background-color: rgb(120, 221, 162);  
 }
 .right{
-    width: 75%;
+    width: 80%;
     height: 100%;
-    background-color: brown;
+    background-color: rgb(230, 95, 95);
     overflow: auto;
 }
