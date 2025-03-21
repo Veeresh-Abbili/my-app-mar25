@@ -1,0 +1,15 @@
+<form [formGroup]="accountForm">
+    <label>Account Name</label>
+    <input type="text" formControlName="account_name">
+    <label>Available_balance</label>
+    <input type="number" formControlName="available_balance">
+    <label>Account Number</label>
+    <input type="number" formControlName="account_number">
+    <label>City</label>
+    <input type="text" formControlName="city">
+    <label>Profile picture</label>
+    <input type="text" formControlName="profile_picture">
+    <label>ifsc code</label>
+    <input type="number" formControlName="ifsc_code">
+    <button (click)="create()" class="btn btn-info">create account</button>
+</form>

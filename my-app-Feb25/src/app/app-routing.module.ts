@@ -19,6 +19,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
+import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
 
 const routes: Routes = [
   {path:'My Website',component:MyWebsiteComponent,children:[
@@ -38,14 +40,17 @@ const routes: Routes = [
     {path:'Employee',component:EmployeeComponent},
     {path:'Vehicle',component:VehicleComponent},
     {path:'Accounts',component:AccountsComponent},
-    {path:'Flipkart',component:FlipkartComponent}
+    {path:'Flipkart',component:FlipkartComponent},
+    {path:'creatvehicle',component:CreatvehicleComponent},
+    {path:'createaccounts',component:CreateaccountsComponent}
     ]},
 
     //parent routing
  // {path:'',component:LoginComponent},//default routing
  // {path:'login',component:LoginComponent},
   //{path:'**',component:Error404Component},//wild card routing];
-  {path:'Home',component:HomeComponent}
+  {path:'Home',component:HomeComponent},
+  
 ];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

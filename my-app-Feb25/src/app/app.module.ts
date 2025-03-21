@@ -14,7 +14,7 @@ import { CalculatorComponent } from './calculator/calculator.component';
 import { RectangleComponent } from './rectangle/rectangle.component';
 import { CircleComponent } from './circle/circle.component';
 import { BMIComponent } from './bmi/bmi.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { EMIComponent } from './emi/emi.component';
 import { FahrenheitComponent } from './fahrenheit/fahrenheit.component';
 import { SimpleInterestComponent } from './simple-interest/simple-interest.component';
@@ -24,6 +24,8 @@ import { VehicleComponent } from './vehicle/vehicle.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
+import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
+import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
 
 @NgModule({
   declarations: [
@@ -47,12 +49,15 @@ import { FlipkartComponent } from './flipkart/flipkart.component';
     VehicleComponent,
     AccountsComponent,
     FlipkartComponent,
+    CreatvehicleComponent,
+    CreateaccountsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule,
     
     
   ],
