@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style>
+        body{
+            margin:0%;
+        }
+        .header{
+            height:20vh;
+            width:100vw;
+            background-color: aqua;
+        }
+        .main{
+            display:flex;
+            justify-content:space-between
+        }
+        .left{
+            text-align: center;
+            height:80vh;
+            width:33vw;
+            background-color: rgb(167, 211, 97);  
+        }
+        .middle{
+            text-align: center;
+            height:80vh;
+            width:33vw;
+            background-color: rgb(46, 204, 221);  
+        }
+        .right{
+            text-align: center;
+            height:80vh;
+            width:33vw;
+            background-color: rgb(155, 106, 161);  
+        }
+        .b2{
+            background-color: rgb(21, 21, 223);
+            color: white;
+            width:60px;
+            height:30px;
+            border-radius: 50px;
+            box-shadow: 6px 5px 4px rgb(62, 62, 147);
+        }
+        .b3{
+            background-color:red;
+            color: white;
+            width:60px;
+            height:30px;
+            border-radius: 50px;
+            box-shadow: 6px 5px 4px rgb(132, 58, 58);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+            <h1 style="margin: 0px;text-align: center;padding-top: 50px;">CLOCK</h1>
+                <p style="margin: 0px;text-align: end;padding-right: 200px;"><strong>Date:</strong> <span id="date"></span></p>
+                <p style="margin: 0px;text-align: end;padding-right: 170px;"><strong>Time:</strong> <span id="time"></span></p> 
+                <script>
+                    function updateDateTime() {
+                        var currentDateTime = new Date();
+                        var date = currentDateTime.toLocaleDateString();
+                        var time = currentDateTime.toLocaleTimeString();
+                        document.getElementById("date").innerHTML = date;
+                        document.getElementById("time").innerHTML = time;
+                    }
+                    setInterval(updateDateTime, 1000);
+                </script>
+    </div>
+    <div class="main">
+        <div class="left">
+            <h1>Counter</h1>
+            <label><b>Upto:</b></label>
+            <input type="number" id="time"><label><b>Sec</b></label><br><br>
+            <button class="b2" onclick="start()">Start</button>
+            <button class="b3" onclick="stop()">Stop</button>
+            <p id="resul"><b>Result:</b></p>  
+
+            <script>
+                var count=0;
+                var result;
+                function start(){
+                 var enter=parseInt(document.getElementById('time').value);
+                 result=setInterval(function(){
+                     count++;
+                     document.getElementById('resul').innerText=count;
+                     if(enter===count){
+                         clearInterval(result)
+                     }
+                 },1000); 
+             }
+             function stop(){
+                 clearInterval(result)
+             }
+             </script>
+        </div>
+        <div class="middle">
+            <h1>Timer</h1>
+    <label><b>Upto:</b></label>
+    <input type="number" id="timeInput"><label><b>Sec</b></label><br><br>
+    <button class="b2" onclick="startTimer()">Start</button>
+    <button class="b3" onclick="stopTimer()">Stop</button>
+
+    <p id="displayTime"><b>Result:</b></p>
+
+    <script>
+        let timerInterval;
+        let counter = 0;
+
+        function startTimer() {
+            let inputTime = parseInt(document.getElementById('timeInput').value);
+            counter = 0;
+            document.getElementById('displayTime').textContent = "0:00";
+            timerInterval = setInterval(function() {
+                let minutes = Math.floor(counter / 60);
+                let seconds = counter % 60;
+
+                document.getElementById('displayTime').textContent = 
+                    minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
+
+                if (counter === inputTime) {
+                    clearInterval(timerInterval);
+                }
+
+                counter++;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timerInterval);
+        }
+    </script>
+        </div>
+        <div class="right">
+            <h1>Countdown</h1>
+            <label><b>Upto:</b></label>
+            <input type="number" id="timeInput2"><label><b>Sec</b></label><br><br>
+            <button class="b2" onclick="startTimer2()">Start</button>
+            <button class="b3" onclick="stopTimer2()">Stop</button>
+        
+            <p id="displayTime2"><b>Result:</b></p>
+        
+            <script>
+                let timerInterval2;
+                let counter2;
+        
+                function startTimer2() {
+                    let inputTime2 = parseInt(document.getElementById('timeInput2').value);
+        
+                    counter2 = inputTime2;
+                    displayTime2();
+                    timerInterval2 = setInterval(function() {
+                        let minutes2 = Math.floor(counter2 / 60);
+                        let seconds2 = counter2 % 60;
+        
+                        document.getElementById('displayTime2').textContent = 
+                            minutes2 + ":" + (seconds2 < 10 ? "0" : "") + seconds2;
+        
+                        if (counter2 === 0) {
+                            clearInterval(timerInterval2);
+                        }
+        
+                        counter2--;
+                    }, 1000);
+                }
+        
+                function stopTimer2() {
+                    clearInterval(timerInterval2);
+                }
+        
+                function displayTime2() {
+                    let minutes2 = Math.floor(counter2 / 60);
+                    let seconds2 = counter2 % 60;
+                    document.getElementById('displayTime2').textContent = 
+                        minutes2 + ":" + (seconds2 < 10 ? "0" : "") + seconds2;
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>

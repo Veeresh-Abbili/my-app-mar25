@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Timer</title>
+    <script>
+        var Timerseconds = 0;
+        var TimerInterval = null;
+
+        function startTimer() {
+            stopTimer();
+            const limit = parseInt(document.getElementById("TimerLimit").value) || 0;
+            let minutes = Math.floor(limit / 60); 
+            let seconds = limit % 60;
+            document.getElementById("TimerDisplay").innerText = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+            
+            TimerInterval = setInterval(() => {
+                seconds++;
+                if (seconds >= 60) {
+                    minutes++;
+                    seconds = 0;
+                }
+                document.getElementById("TimerDisplay").innerText = `${minutes}:${seconds < 10 ? "0" + seconds : seconds}`;
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(TimerInterval); 
+        }
+    </script>
 </head>
 <body>
     <h1>Timer</h1>
-    
-    <h2>result</h2>
-
+    <label for="TimerLimit">Upto</label>
+    <input type="number" id="TimerLimit" ><label>Sec</label> <br><br>
+    <button onclick="startTimer()">Start</button>
+    <button onclick="stopTimer()">Stop</button>
+    <h2 id="TimerDisplay">00:00</h2>
 </body>
 </html>
