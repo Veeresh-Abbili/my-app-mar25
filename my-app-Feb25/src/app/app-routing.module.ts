@@ -23,6 +23,7 @@ import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
 import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
 import { IdCardsComponent } from './id-cards/id-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 
 const routes: Routes = [
   {path:'My Website',component:MyWebsiteComponent,children:[
@@ -46,7 +47,8 @@ const routes: Routes = [
     {path:'creatvehicle',component:CreatvehicleComponent},
     {path:'createaccounts',component:CreateaccountsComponent},
     {path:'id_cards',component:IdCardsComponent},
-    {path:'create-user',component:CreateUserComponent}
+    {path:'create-user',component:CreateUserComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
     ]},
 
     //parent routing
