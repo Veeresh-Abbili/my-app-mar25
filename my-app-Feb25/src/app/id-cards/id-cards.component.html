@@ -1,0 +1,33 @@
+<h1>Id-cards</h1>
+<div id="id" *ngFor="let detail of id_cards; let i=index ">
+    <div class="header">
+        <div class="header-left">
+            <img src="https://loremflickr.com/640/480/abstract" width="119px" height="75px">
+        </div>
+        <div class="header-right">
+            <label>{{detail.school_name}}</label>
+        </div>
+    </div>
+    <div class="body">
+        <div class="body-left">
+        <label>Name:{{detail.name}}</label><br>
+        <label>Phone:{{detail.phone}}</label><br>
+        <label>City:{{detail.city}}</label><br>
+        <label>DOB:{{detail.dob}}</label>
+        </div>
+        <div class="body-right"> 
+            <img class="body-img"  src= "{{detail.profile_picture}}">
+        </div>
+    </div>
+    <div class="footer">
+        <div class="top">
+            <label>school_city:{{detail.school_city}}</label>
+            <label>school_pin:{{detail.school_pin}}</label>
+        </div>
+        <div class="button">
+            <button (click)="('')" class="btn btn-info">View</button>
+            <button (click)="('')" class="btn btn-light">Edit</button>
+            <button (click)="('')" class="btn btn-danger">Delete</button>
+        </div>
+    </div>
+</div>

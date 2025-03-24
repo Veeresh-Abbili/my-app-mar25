@@ -26,6 +26,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
 import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
+import { IdCardsComponent } from './id-cards/id-cards.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +53,8 @@ import { CreateaccountsComponent } from './createaccounts/createaccounts.compone
     FlipkartComponent,
     CreatvehicleComponent,
     CreateaccountsComponent,
+    IdCardsComponent,
+    CreateUserComponent,
   ],
   imports: [
     BrowserModule,
@@ -58,6 +62,7 @@ import { CreateaccountsComponent } from './createaccounts/createaccounts.compone
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
+  
     
     
   ],

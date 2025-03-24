@@ -21,6 +21,8 @@ import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
 import { CreateaccountsComponent } from './createaccounts/createaccounts.component';
+import { IdCardsComponent } from './id-cards/id-cards.component';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 const routes: Routes = [
   {path:'My Website',component:MyWebsiteComponent,children:[
@@ -42,7 +44,9 @@ const routes: Routes = [
     {path:'Accounts',component:AccountsComponent},
     {path:'Flipkart',component:FlipkartComponent},
     {path:'creatvehicle',component:CreatvehicleComponent},
-    {path:'createaccounts',component:CreateaccountsComponent}
+    {path:'createaccounts',component:CreateaccountsComponent},
+    {path:'id_cards',component:IdCardsComponent},
+    {path:'create-user',component:CreateUserComponent}
     ]},
 
     //parent routing

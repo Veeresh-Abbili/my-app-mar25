@@ -1,0 +1,24 @@
+body{
+    
+    
+
+
+
+}
+form{
+    width: 50%;
+    height:80%;
+    background-image: url("https://img.freepik.com/free-vector/tropical-leaves-background-zoom_23-2148580778.jpg"); 
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 200px;
+}
+.type{
+    align-content: center;
+
+}
