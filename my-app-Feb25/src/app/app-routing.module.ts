@@ -24,9 +24,11 @@ import { CreateaccountsComponent } from './createaccounts/createaccounts.compone
 import { IdCardsComponent } from './id-cards/id-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
+import { AuthenticationGuard } from './authentication.guard';
+import { IdCarddetailsComponent } from './id-carddetails/id-carddetails.component';
 
 const routes: Routes = [
-  {path:'My Website',component:MyWebsiteComponent,children:[
+  {path:'My Website',component:MyWebsiteComponent,canActivate:[AuthenticationGuard],children:[
     {path:'welcome',component:WelcomeComponent}, //children routing
     {path:'Data Binding',component:DataBindingComponent},
     {path:'Calculator',component:CalculatorComponent},
@@ -38,7 +40,7 @@ const routes: Routes = [
     {path:'Simple Interest',component:SimpleInterestComponent}
     ]},
   
-  {path:'dashboard',component:DashboardComponent,children:[
+  {path:'dashboard',component:DashboardComponent,canActivate:[AuthenticationGuard], children:[
     {path:'Directives',component:DirectivesComponent},
     {path:'Employee',component:EmployeeComponent},
     {path:'Vehicle',component:VehicleComponent},
@@ -48,8 +50,15 @@ const routes: Routes = [
     {path:'createaccounts',component:CreateaccountsComponent},
     {path:'id_cards',component:IdCardsComponent},
     {path:'create-user',component:CreateUserComponent},
-    {path:'vehicle-details/:id',component:VehicleDetailsComponent}
-    ]},
+    //{path:'vehicle-details',component:VehicleDetailsComponent},
+    {path:'vehicle-details/:id',component:VehicleDetailsComponent},
+    {path:'edit-vehicle/:id',component:CreatvehicleComponent},
+    {path:'id-carddetails/:id',component:IdCarddetailsComponent},
+
+
+  ]},
+  {path:'login',component:LoginComponent},
+  {path:'',component:LoginComponent},
 
     //parent routing
  // {path:'',component:LoginComponent},//default routing

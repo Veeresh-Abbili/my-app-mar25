@@ -8,6 +8,7 @@
     <option>city</option>
     <option>profile_picture</option>
     <option>ifsc_code</option>
+    <option>Actions</option>
     
 </select>
 
@@ -61,8 +62,9 @@
         <td>{{account.available_balance}}</td>
         <td>{{account.account_number}}</td>
         <td>{{account.city}}</td>
-        <td>{{account.profie_picture}}</td>
+        <td> {{account.profie_picture}}</td>
         <td>{{account.ifsc_code}}</td>
+
         <td>
             <button (click)="delete(account.id)" class="btn btn-danger" style="color: aliceblue;">Delete</button>
         </td>

@@ -1,4 +1,38 @@
-<h1>Id-cards</h1>
+
+<div class="cotainer">
+    <div class="cards">
+       <h1>Id-cards</h1>
+       <input type="text" [(ngModel)]="term" (keyup)="filter()" placeholder="Enter to item search">
+       
+       <select [(ngModel)]="column">
+        <option>Name</option>
+        <option>Phone</option>
+        <option>City</option>
+        <option>DOB</option>
+       </select>
+       <select [(ngModel)]="order">
+        <option>asc</option>
+        <option>desc</option>
+       </select>
+       <button (click)="sort()">Sort</button>
+
+
+       <select [(ngModel)]="limit">
+        <option>5</option>
+        <option>10</option>
+        <option>15</option>
+        <option>20</option>
+       </select>
+      
+       <select [(ngModel)]="page">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+
+     <button (click)="pagination()">Pagination</button>
+
+    </div>
 <div id="id" *ngFor="let detail of id_cards; let i=index ">
     <div class="header">
         <div class="header-left">
@@ -24,10 +58,12 @@
             <label>school_city:{{detail.school_city}}</label>
             <label>school_pin:{{detail.school_pin}}</label>
         </div>
-        <div class="button">
-            <button (click)="('')" class="btn btn-info">View</button>
+        <div class="button"  *ngFor="let card of id_cards">
+        
+            <button routerLink="/dashboard/id-carddetails/{{card.id}}"class="btn btn-info">View</button>
             <button (click)="('')" class="btn btn-light">Edit</button>
             <button (click)="('')" class="btn btn-danger">Delete</button>
         </div>
     </div>
+</div>
 </div>
