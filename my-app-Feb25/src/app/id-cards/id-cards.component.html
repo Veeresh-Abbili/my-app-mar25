@@ -59,8 +59,7 @@
             <label>school_pin:{{detail.school_pin}}</label>
         </div>
         <div class="button"  *ngFor="let card of id_cards">
-        
-            <button routerLink="/dashboard/id-carddetails/{{card.id}}"class="btn btn-info">View</button>
+            <button routerLink="/dashboard/id-carddetails/{{card.id}}" class="btn btn-info">View</button>
             <button (click)="('')" class="btn btn-light">Edit</button>
             <button (click)="('')" class="btn btn-danger">Delete</button>
         </div>

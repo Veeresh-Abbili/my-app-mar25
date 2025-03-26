@@ -30,6 +30,12 @@ import { IdCardsComponent } from './id-cards/id-cards.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { IdCarddetailsComponent } from './id-carddetails/id-carddetails.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { Sibling2Component } from './sibling2/sibling2.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+import { RatingComponent } from './rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +64,12 @@ import { IdCarddetailsComponent } from './id-carddetails/id-carddetails.componen
     IdCardsComponent,
     CreateUserComponent,
     VehicleDetailsComponent,
+    Sibling1Component,
+    Sibling2Component,
+    CommunicationComponent,
+    ParentComponent,
+    ChildComponent,
+    RatingComponent,
   
   ],
   imports: [

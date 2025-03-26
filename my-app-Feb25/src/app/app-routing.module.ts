@@ -26,6 +26,9 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { VehicleDetailsComponent } from './vehicle-details/vehicle-details.component';
 import { AuthenticationGuard } from './authentication.guard';
 import { IdCarddetailsComponent } from './id-carddetails/id-carddetails.component';
+import { CommunicationComponent } from './communication/communication.component';
+import { Sibling1Component } from './sibling1/sibling1.component';
+import { ParentComponent } from './parent/parent.component';
 
 const routes: Routes = [
   {path:'My Website',component:MyWebsiteComponent,canActivate:[AuthenticationGuard],children:[
@@ -59,6 +62,10 @@ const routes: Routes = [
   ]},
   {path:'login',component:LoginComponent},
   {path:'',component:LoginComponent},
+  {path:'communication',component:CommunicationComponent, children:[
+    {path:'sibling',component:Sibling1Component},
+    {path:'parent',component:ParentComponent},
+  ]},
 
     //parent routing
  // {path:'',component:LoginComponent},//default routing
