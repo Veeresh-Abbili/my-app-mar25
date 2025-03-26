@@ -36,6 +36,7 @@ import { CommunicationComponent } from './communication/communication.component'
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
+import { TextareaComponent } from './textarea/textarea.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +71,7 @@ import { RatingComponent } from './rating/rating.component';
     ParentComponent,
     ChildComponent,
     RatingComponent,
+    TextareaComponent,
   
   ],
   imports: [
