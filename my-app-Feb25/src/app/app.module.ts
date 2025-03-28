@@ -39,6 +39,7 @@ import { RatingComponent } from './rating/rating.component';
 import { TextareaComponent } from './textarea/textarea.component';
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
+import { MiniProjectComponent } from './mini-project/mini-project.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { BalancePipe } from './balance.pipe';
     TextareaComponent,
     CapitalDirective,
     BalancePipe,
+    MiniProjectComponent,
   
   ],
   imports: [

@@ -29,6 +29,7 @@ import { IdCarddetailsComponent } from './id-carddetails/id-carddetails.componen
 import { CommunicationComponent } from './communication/communication.component';
 import { Sibling1Component } from './sibling1/sibling1.component';
 import { ParentComponent } from './parent/parent.component';
+import { MiniProjectComponent } from './mini-project/mini-project.component';
 
 const routes: Routes = [
   {path:'My Website',component:MyWebsiteComponent,canActivate:[AuthenticationGuard],children:[
@@ -66,6 +67,7 @@ const routes: Routes = [
     {path:'sibling',component:Sibling1Component},
     {path:'parent',component:ParentComponent},
   ]},
+  {path:'mini-project',component:MiniProjectComponent},
 
     //parent routing
  // {path:'',component:LoginComponent},//default routing
