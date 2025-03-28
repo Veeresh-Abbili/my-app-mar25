@@ -1,9 +1,9 @@
 <h1>Flipkart</h1>
 <div class="container">
     <div class="card" *ngFor="let product of flipkart;let i=index">
-        <img [src]="product.image" alt="{{product.title}}'s image" >
-        <div class="para">
-        <p class="rating"><app-rating [rating]="product.rating?.rate"></app-rating>{{product.rating.rate}}</p>
+        <img [src]="product.image" alt="{{product.title}}'s image">
+    <div class="para">
+        <p class="rating"><app-rating [rating]="product.rating.rate"></app-rating>{{product.rating.rate}}</p>
         <p class="category">{{product.category | uppercase}}</p>
         <p class="title">{{product.title}}</p>
         <p class="price">{{product.price | currency}}</p>

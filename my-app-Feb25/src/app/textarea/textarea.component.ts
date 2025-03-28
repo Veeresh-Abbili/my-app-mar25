@@ -11,8 +11,11 @@ export class TextareaComponent {
 
   @Output() textareaEvent:EventEmitter<number>=new EventEmitter();
 
+  inputValue:string=''
+
   send(){
     this.textareaEvent.emit(50);
+    alert("50")
   }
 
 }

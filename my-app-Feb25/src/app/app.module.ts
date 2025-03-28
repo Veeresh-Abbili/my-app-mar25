@@ -37,6 +37,8 @@ import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
 import { RatingComponent } from './rating/rating.component';
 import { TextareaComponent } from './textarea/textarea.component';
+import { CapitalDirective } from './capital.directive';
+import { BalancePipe } from './balance.pipe';
 
 @NgModule({
   declarations: [
@@ -72,6 +74,8 @@ import { TextareaComponent } from './textarea/textarea.component';
     ChildComponent,
     RatingComponent,
     TextareaComponent,
+    CapitalDirective,
+    BalancePipe,
   
   ],
   imports: [

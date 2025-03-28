@@ -2,7 +2,8 @@
    <h1>Create_User</h1>
 <form [formGroup]=" userForm">  
 <label>Name:</label>
-<input type="text" formControlName="name">
+<input type="text" formControlName="name" appCapital>
+<!-- // here appCapital inserted by capital.directive.ts component for functional perpose -->
 <div *ngIf="userForm.get('name')?.touched && userForm.get('name')?.invalid">
   <p *ngIf="userForm.get('name')?.errors?.['required']">Name is Required</p>
   <p *ngIf="userForm.get('name')?.errors?.['minlength']">Name should be minimum 6 characters</p>

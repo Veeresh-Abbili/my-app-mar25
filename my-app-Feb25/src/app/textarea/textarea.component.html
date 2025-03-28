@@ -2,6 +2,9 @@
 
 <h1>{{max}}</h1>
 
-<button (click)="send()">send</button>
+<textarea [maxLength]="50" [(ngModel)]="inputValue"></textarea>
+<span>{{inputValue.length || 0}}/50</span>
 
+<!-- <input > -->
+<button (click)="send()">send</button>
 
