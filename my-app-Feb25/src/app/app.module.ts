@@ -21,7 +21,7 @@ import { SimpleInterestComponent } from './simple-interest/simple-interest.compo
 import { DirectivesComponent } from './directives/directives.component';
 import { EmployeeComponent } from './employee/employee.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AccountsComponent } from './accounts/accounts.component';
 import { FlipkartComponent } from './flipkart/flipkart.component';
 import { CreatvehicleComponent } from './creatvehicle/creatvehicle.component';
@@ -40,6 +40,8 @@ import { TextareaComponent } from './textarea/textarea.component';
 import { CapitalDirective } from './capital.directive';
 import { BalancePipe } from './balance.pipe';
 import { MiniProjectComponent } from './mini-project/mini-project.component';
+import { TokenInterceptor } from './token.interceptor';
+import { AboutUsModule } from './about-us/about-us.module';
 
 @NgModule({
   declarations: [
@@ -86,11 +88,17 @@ import { MiniProjectComponent } from './mini-project/mini-project.component';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-  
+    AboutUsModule,
     
     
   ],
-  providers: [],
+  providers: [
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptor,
+      multi:true
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
