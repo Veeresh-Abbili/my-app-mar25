@@ -1,5 +1,5 @@
 import { Component, NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { LoginComponent } from './login/login.component';
 import { Error404Component } from './error404/error404.component';
@@ -58,6 +58,10 @@ const routes: Routes = [
     {path:'vehicle-details/:id',component:VehicleDetailsComponent},
     {path:'edit-vehicle/:id',component:CreatvehicleComponent},
     {path:'id-carddetails/:id',component:IdCarddetailsComponent},
+    {
+      path:'payments',
+      loadChildren: () =>import('./payments/payments.module').then(m => m.PaymentsModule)
+    }
 
 
   ]},
@@ -77,7 +81,7 @@ const routes: Routes = [
   
 ];
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{preloadingStrategy:PreloadAllModules})],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
